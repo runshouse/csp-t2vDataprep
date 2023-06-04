@@ -61,7 +61,7 @@ lora_rank: 16
 train_data:
 
   # The width and height in which you want your training data to be resized to.
-  width: 320      
+  width: 576      
   height: 320
 
   # This will find the closest aspect ratio to your input width and height. 

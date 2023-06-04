@@ -25,7 +25,7 @@ extend_dataset: False
 # Caches the latents (Frames-Image -> VAE -> Latent) to a HDD or SDD. 
 # The latents will be saved under your training folder, and loaded automatically for training.
 # This both saves memory and speeds up training and takes very little disk space.
-cache_latents: True
+cache_latents: False
 
 # If you have cached latents set to `True` and have a directory of cached latents,
 # you can skip the caching process and load previously saved ones. 
@@ -93,7 +93,7 @@ train_data:
   path: "path/to/folder/of/videos/"
 
   # 'json'
-  json_path: 'C:/Users/cerspense/Documents/AI/csp-t2vDataprep/train_data/subset_v20230528_15S_576x320.json'
+  json_path: 'C:/Users/cerspense/Documents/AI/csp-t2vDataprep/train_data/subset_v20230528_15S_320x320.json'
 
   # 'image'
   image_dir: 'path/to/image/directory'
@@ -114,7 +114,7 @@ validation_data:
   num_frames: 30
 
   # Height and width of validation sample.
-  width: 576
+  width: 320
   height: 320
 
   # Number of inference steps when generating the video.
@@ -143,7 +143,7 @@ extra_text_encoder_params: null
 train_batch_size: 1
 
 # Maximum number of train steps. Model is saved after training.
-max_train_steps: 60000
+max_train_steps: 100000
 
 # Saves a model every nth step.
 checkpointing_steps: 1000

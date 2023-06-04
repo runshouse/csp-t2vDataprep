@@ -1,8 +1,8 @@
 # Pretrained diffusers model path.
-pretrained_model_path: "./models/model_scope_diffusers/" #https://huggingface.co/damo-vilab/text-to-video-ms-1.7b/tree/main
+pretrained_model_path: "C:/Users/cerspense/Documents/AI/csp-t2vDataprep/Text-To-Video-Finetuning/models/model_scope_diffusers" #https://huggingface.co/damo-vilab/text-to-video-ms-1.7b/tree/main
 
 # The folder where your training outputs will be placed.
-output_dir: "./outputs"
+output_dir: "C:/Users/cerspense/Documents/AI/csp-t2vDataprep/outputs"
 
 # You can train multiple datasets at once. They will be joined together for training.
 # Simply remove the line you don't need, or keep them all for mixed training.
@@ -29,7 +29,7 @@ cache_latents: True
 
 # If you have cached latents set to `True` and have a directory of cached latents,
 # you can skip the caching process and load previously saved ones. 
-cached_latent_dir: null #/path/to/cached_latents
+cached_latent_dir: 'C:/Users/cerspense/Documents/AI/csp-t2vDataprep/outputs/train_2023-06-03T23-47-29/cached_latents' #/path/to/cached_latents
 
 # Train the text encoder. Leave at false to use LoRA only (Recommended).
 train_text_encoder: False
@@ -66,7 +66,7 @@ train_data:
 
   # This will find the closest aspect ratio to your input width and height. 
   # For example, 512x512 width and height with a video of resolution 1280x720 will be resized to 512x256
-  use_bucketing: True
+  use_bucketing: False
 
   # The start frame index where your videos should start (Leave this at one for json and folder based training).
   sample_start_idx: 1
@@ -114,7 +114,7 @@ validation_data:
   num_frames: 30
 
   # Height and width of validation sample.
-  width: 576
+  width: 320
   height: 320
 
   # Number of inference steps when generating the video.
